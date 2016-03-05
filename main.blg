@@ -1,0 +1,90 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: Chapter1.aux
+A level-1 auxiliary file: Chapter2.aux
+A level-1 auxiliary file: Chapter3.aux
+A level-1 auxiliary file: RQ1.aux
+A level-1 auxiliary file: RQ2a.aux
+A level-1 auxiliary file: RQ2b.aux
+A level-1 auxiliary file: RQ2c.aux
+A level-1 auxiliary file: Chapter4.aux
+A level-1 auxiliary file: Chapter5.aux
+The style file: plain.bst
+A level-1 auxiliary file: appendix.aux
+Database file #1: MyThesisCollection.bib
+Warning--entry type for "Verschuur2013" isn't style-file defined
+--line 1486 of file MyThesisCollection.bib
+Warning--entry type for "mysports" isn't style-file defined
+--line 1545 of file MyThesisCollection.bib
+Warning--entry type for "ahnformula" isn't style-file defined
+--line 1551 of file MyThesisCollection.bib
+Warning--entry type for "ahnformula2" isn't style-file defined
+--line 1557 of file MyThesisCollection.bib
+Warning--entry type for "gbka" isn't style-file defined
+--line 1570 of file MyThesisCollection.bib
+Warning--entry type for "opendata" isn't style-file defined
+--line 1582 of file MyThesisCollection.bib
+Warning--I didn't find a database entry for "Verschuur2014"
+Warning--I didn't find a database entry for "Ballester"
+Warning--I didn't find a database entry for "hogertz2010"
+Warning--to sort, need author or key in countryReport
+Warning--to sort, need author or key in mysports
+Warning--to sort, need author or key in ahnformula
+Warning--to sort, need author or key in ahnformula2
+Warning--empty author in countryReport
+Warning--empty journal in countryReport
+Warning--empty journal in puccini2014
+Warning--empty journal in Bartholmew2011
+Warning--empty journal in Bossink2011
+Warning--empty publisher in Crow2014
+Warning--empty journal in OECD2001
+Warning--empty journal in Hylkema2014
+Warning--empty institution in changepoint2015
+Warning--empty journal in MENSenSTRAAT2014
+Warning--empty journal in leidraad2011
+Warning--empty institution in VanDerZon2013
+Warning--empty journal in Wang2015
+You've used 45 entries,
+            2118 wiz_defined-function locations,
+            756 strings with 11761 characters,
+and the built_in function-call counts, 13488 in all, are:
+= -- 1255
+> -- 776
+< -- 1
++ -- 313
+- -- 266
+* -- 963
+:= -- 2341
+add.period$ -- 122
+call.type$ -- 45
+change.case$ -- 269
+chr.to.int$ -- 0
+cite$ -- 62
+duplicate$ -- 440
+empty$ -- 979
+format.name$ -- 266
+if$ -- 2679
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 32
+newline$ -- 215
+num.names$ -- 82
+pop$ -- 294
+preamble$ -- 1
+purify$ -- 223
+quote$ -- 0
+skip$ -- 340
+stack$ -- 0
+substring$ -- 649
+swap$ -- 38
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 178
+warning$ -- 17
+while$ -- 117
+width$ -- 47
+write$ -- 432
+(There were 26 warnings)
