@@ -1,69 +1,139 @@
-\chapter[Discussion and conclusions]{Discussion and conclusions} 
-%  restate the research question. nr 1. Critical walkability factors
-The critical walkability factors for urban outdoor environment for elderly people, with a rollator, show that there are many things mentionable to improve on, and policy does not take pedestrians into account sufficiently. When policy design documents and the contacts from the municipality state that the pedestrian area is often the residual area in design and has the least priority, the arguments from the introduction are confirmed, that indeed, the pedestrian is forgotten in design. Moreover, till so far this applies for the total group of pedestrians, not, the mobility impaired pedestrians, who more require a well designed public space. 
+\chapter{Conclusion and discussion} 
+The first section of this final chapter restates the research questions and presents the main conclusions of this research. Section 5.2 discusses the results outcomes and limitations of the research. Section 5.3 gives several recommendations to improve this research and for possible future research.
 
-The small part of interviews held with rollator users, underline the importance of the quality of the pedestrian area. When surfaces will be more smooth, and surroundings less exhausting, longer and more comfortable walks will be able. Keeping the elderly longer fit, enabled and so living longer independent. Though, personal behaviour and preferences strongly influence the feelings and emotions one has to its surroundings. Shown in the two interviews, where one participant really likes walking while the other rather stays inside.
+\section{Conclusion} %antwoord op vragen geven
+The objective of this research was to get the critical walkability factors that elderly experience while walking outdoors with a rollator, and explore the possibilities of geo-data and GIS analysis to visualize them, to raise more awareness and shed more light on the forgotten elderly pedestrian. This to trigger possible action at decentralized governments for increasing walking activity of elderly people. Consequently this may support health, the capability to live independently and grow old in their own house and environment. All may contribute to less need for healthcare and so reducing costs for elder care and improving the overall quality of life. 
 
-From the final list of critical factors assembled by all the findings, one of the main irritations specifically for Amsterdam are wrongly parked bikes and cars. Mainly due to the small pavement areas and parking on the pavements. Many road users, hardly think about the less impaired road users while parking their bike outside, against a lantern pole, and so blocking the pavements for wheelchair or rollator users. 
+In order to analyse and map the critical walkability factors for elderly people depended on a rollator, in the urban outdoor space, the following sub-objectives and research questions were developed:
+\begin{enumerate}
+\item Find the critical factors for walkability in the urban outdoor environment for elderly depended on a rollator.
+\item Map and analyse these critical factors, 
+ \begin{enumerate}
+ 	\item by analysing existing and available geo-data and testing its suitability and detail required
+ 	\item by collecting geodata (measuring rollator movements with an accelerometer) and analysis
+ 	\item by comparing these the two data sources (by using the change point method) 
+ \end{enumerate}
+\end{enumerate}
+
+% restate the research question. nr 1. Critical walkability factors
+To find the critical walkability factors or urban outdoor environment for elderly people, with a rollator a literature study was conducted and interviews were held. This showed that there are many criteria mentionable to improve on for the elderly pedestrian. The top 3 of critical walkability factors were, wrongly parked bikes and cars, irregular cobbled surfaces and sloping pavements. The small part of interviews held with rollator users, underline the importance of the quality of the pedestrian area. The most important thing mentioned is, that, when surfaces will be more smooth, and surroundings less exhausting, longer and more comfortable walks will be able. Also confirmed is that the older peoples' perceived needs as pedestrian in the outdoor urban environment are considered important by the older people themselves. This research found walkability factors in line with previous researches and contributes to the knowledge specifically for Amsterdam. From the final list of critical factors assembled by all the findings, one of the main irritations specifically for Amsterdam are wrongly parked bikes and cars. Mainly due to the small pavement areas and parking on the pavements. Many road users, hardly think about the less impaired road users while parking their bike outside, against a lantern pole, and so blocking the pavements for wheelchair or rollator users. Next to this, research into the policy design and interviews with the municipality showed that policy design, does not take pedestrians into account sufficiently. Let alone, the elderly or mobile impaired pedestrian. 
 
 
-%  restate the research question. nr 2. Mapping the Critical walkability factors
-% The most mentioned critical walkability indicators which are researchable with GIS methods are sloping pavements
+% restate the research question. nr 2. Mapping the Critical walkability factors
+In order to map and analyse these critical factors, the first step was to analyse existing geo-data and test the detail required. Only the work Matthews et al. (2003), Modelling Access with GIS in Urban Systems~\cite{Matthews2003}, Svensson (2010)~\cite{Svensson2010} and Duncan et al. (2011) with Walk Score: Estimating Neighbourhood Walkability~\cite{Duncan2011} provide methods for quantifying walkability factors in a GIS system. They use a multi-criteria model with quantitative and qualitative techniques to make visible how the build environment can be hostile for the mobile impaired. 
+For this research only a few datasets were used. The GBKA and the AHN2. An attempt was made to collect data on the location of curbs, ramps, what the material of the surface is etc. Though, there is no indication in the available data-sets of Amsterdam whatsoever on where curbs are located, how high they are, and whether there are ramps placed or where the curb is lowered. Besides this, no information could be found about the exact type of material of the surface or maintenance activities. Only an overview map showing material use per neighbourhood is available, see the Puccini map in annex \ref{pucciniMap} 
 
 % The critical factors derived from the available geo-data is sloping surface and the amount of area available for pedestrians. 
+The first step was to determine the pedestrian area with the available GBKA and have a look at is general characteristics and quality. A new approach had to be invented, as Matthews et al. did, for no label was attached with which target group the dedicated polygon belongs to. A small pilot study was held for the Jordaan in Amsterdam to see its suitability. The own approach to determine which areas are pedestrian area, showed rather high numbers for pedestrians. Around 53\% of the public space in the test area Jordaan, belonged to pedestrians. A surprising amount as often in Amsterdam, pedestrians pavements are very narrow. This did however, include parking plots and public squares and the calculated area contains a lot of poles, bike racks, traffic signs or any other object placed on the pavement. The approach showed that an automatic approach is hard for classifying the polygons, and many mistakes are made in the data set. 
 
-The GBKA showed that also in the available geo data on the public space, the pedestrians are forgotten, as no label was attached with which target group the dedicated polygon belongs to. Also no information could be found about the exact type of material of the surface or maintenance activities. Only an overview map showing material use per neighbourhood is available, see the Puccini map in annex \ref{pucciniMap} 
-Besides, there is no indication whatsoever on where curbs are located, how high they are, and whether there are ramps placed or where the curb is lowered. 
-This made it all hard to derive a walkability overview with the available geo data and create a map with possible bottlenecks. A own approach to determine which areas are pedestrian area, showed rather high numbers for pedestrians. Around 53\% of the public space in the test area Jordaan, belonged to pedestrians. This did include parking plots and public squares. A surprising amount as often in Amsterdam, pedestrians pavements are very narrow. Though this area did not take into account the placement of poles, bike racks, traffic signs or any other object placed on the pavement. Better was not to include parking plots into the pedestrian area. 
+% The most mentioned critical walkability indicators which are researchable with GIS methods are sloping pavements
+Secondly, the AHN2 was used to derive sloping pavements above 4\% slope. A lot of roads, classified for motorized transport showed average values below the 4\% slope, while many pedestrian classified areas, had a slope higher then 4\%. In numbers, the allowable 4\% of slope for pedestrian pavement reduced the optimal pedestrian area to only 8\%. Showing a lot of area being too steep for pedestrian allowable limits. While roads, for motorized transportation have less steep slopes, around 38\% is below the 4\% slope. 
 
-When looking at sloping pavements, one of the other criteria found by research objective 1, the allowable 4\% of slope for pedestrian pavement reduced the optimal pedestrian area to only 8\%. Showing a lot of area being too steep for pedestrian allowable limits. While roads, for motorized transportation have less steep slopes, around 38\% is below the 4\% slope. 
+In conclusion, the GBKA showed that in the available geo-data of the municipality, still lacks detail and is insufficient for quick pedestrian analysis as the pedestrians are forgotten. This confirms the statements of the introduction, that pedestrians are forgotten in data. Only the AHN2 promises good usage for pavement analysis as it gives good insight in the sloping pavements and is detailed enough to detect curbs. 
 
+The collection of own data is done by measuring rollator movements whit an accelerometer. 
+Works from Weiss et al. 2014 and Wang et al. 2015 gave the inspiration to work with the concept of a Smart Walker. Several test routes were walked during the rollator loop. These, unfortunately failed to measure the accelerometer sensor and were not usable. Other tests, walking the rollator myself and measuring different surfaces, showed that irregular surfaces can be measured with a accelerometer. The different kind of surfaces showed clear distinctions in the amount of vibrations when looking at the variance over the measured track. With grass and stones having the highest variance and vibrations and smooth concrete the lowest. When comparing this to a research done by Matthews et al. (2003) a correlation of 0.72 is found. Indicating the two studies do correlate but not highly. This, because the surfaces of Matthews and this research were probably not the exact same, what was measured differs and measurement methods differ. Matthews measured surface hindrance as the accelerometer measures the vibration effect on the rollator. Though, a correlation exist between vibration of the rollator and surface hindrance. And that surface hindrance can be approached with an accelerometer as well. 
 
-
-
-%  restate the research question. nr 3. Mapping the Critical walkability factors
-Map and analysing the critical factors, by measuring rollator movements whit an accelerometer, showed that irregular surfaces can be measured with a accelerometer. The different kind of surfaces showed clear distinctions in the amount of vibrations when looking at the variance over the measured track. With grass and stones having the highest variance and vibrations and smooth concrete the lowest. When comparing this to a research done by Matthews et al. (2003) a correlation of 0.72 is found. Indicating the two studies do correlate but not highly. This, because the surfaces of Matthews and this research were probably not the exact same, what was measured differs and measurement methods differ. Matthews measured surface hindrance as the accelerometer measures the vibration effect on the rollator. Though, the more vibration the more hindrance exists. That the same kind of material show approximately the same relative hindrance values show that surface hindrance can be approach with an accelerometer as well. Possible applications might be to detect the kind of surface material from the accelerometer signatures. 
-
-%  restate the research question. nr 2. Mapping the Critical walkability factors
-Combining the two methods, existing geo data and measurements with an accelerometer, showed new possibilities in detecting change points in the walking routes. 
+In order to compare both methods, using existing geo data to map walkability factors and comparing and testing them with a Smart Walker, a change point analysis was used. the change point method shows an interesting concept for detecting obstacles during a walking route. Several locations can be indicated where the walking behaviour (speed), the slope of the location, and the accelerometer behaviour fall together as expected, a large obstacle is detected. Also some peaks in the acceleration of the z-axis are located around imperfections in the pavement and are not accompanied by speed changes, indicating a small obstacle. Though, breaks and stops by the participant are also included. Several interesting events in the walking routes are that almost all change points for speed, in the Leica route, can be explained through logical reasoning. 
+Also the change points in the z-axis acceleration in the walking route with the MeetRollator seem to be related to the true situation. This however, cannot be stated definitively as here the GPS performed poorly and so the points cannot be accurately compared to the location. Overall, the most change points in the z-axis acceleration occur where obstacles are taken, the route is started or ended. On the larger straight segments of the route, where the pavement stays nearly the same and walking speed is continuous, less change points can be found. The big amount of wrong points in the slope change points, actually originate from the inaccurate location determination and resulted in extracting values form the slope raster at the wrong location. Hopefully, we can add obstacle detection and surface quality monitoring as another possible application to the Smart Walker, next to fall protection, early warning systems, health monitoring, navigation help or cognitive assistance.
 
 
-
-
-%2. Relate your findings to the issues you raised in the introduction. Note similarities, differences, common or different trends.  Show how your study either corraborates, extends, refines, or conflicts with previous findings.
-
-% 3. If you have unexpected findings, try to interpret them in terms of method, interpretation, even a restructured hypothesis; in extreme cases, you may have to rewrite your introduction. Be honest about the limitations of your study.
-
-%4. State the major conclusions from your study and present the theoretical and practical implications of your study.
-
-
-% 5. Discuss the implications of your study for future research and be specific about the next logical steps for future researchers.
-Possible  applications of smart phone with accelerometer use, for measuring rollator movements or surface resistance. Translate this to the amount of energy that elderly consume. 
-
-
-
-
-
-
-
-
-
-For elderly, who are more vulnerable, environmental attributes can be barriers to an active engagement in urban life. The quality of the immediate environment is a significant determinant of elders well-being, independence and quality of life.
-
-- non intrusive, low cost method. 
-- no difference in walking gait characteristics between elderly and young people.~\cite{Wang2015} So not difference from walking with the rollator myself. 
-
-
-
-
-Now, the urban environment will never be optimal, so certain change points will indicate not so important happenings. 
-
-
-
-Safety, robbery and perception of safety are hard to classify  (hang jeugd)
-Perception of safety is different for every individual. Very personal determinants. 
+\section{Discussion} %bevestiging tov literatuur
  
 
-Elderly:
-Lot of differences in rollator users
-Lot of different rollators, this research does not take into account the type of rollator. But the type of wheels and structure of frame might really influence the measurements. 
+\subsection{The forgotten pedestrian}
+When policy design documents and the contacts from the municipality state that the pedestrian area is often the residual area in design and has the least priority, the arguments from the introduction are confirmed, that indeed, the pedestrian is forgotten in design. Moreover, this applies for the total group of pedestrians, not specifically for the mobility impaired pedestrians, who even require a more well designed public space. 
+
+Also the forgotten pedestrian in data is confirmed. Not only the PQN report states that there is not enough data on pedestrians~\cite{Sauter2010}, also Matthews et al. (2003)~\cite{Matthews2003} encounters the first main problem, that no data is held on pavement centrelines. The basic layer for a GIS model is to know, what is pedestrian area or not. Our own research, confirmed that the GBKA, the most detailed topology dataset of the municipality of Amsterdam, did indeed, contain no label on whether it was a road for cars or a pavement for pedestrians. Through a own set up analysis of general assumptions a approximation to label the polygons was conducted. This, seemed more difficult then expected. Matthews stated that precise pedestrian routes can be mapped manually.~\cite{Matthews2003}
+
+
+\subsection{Interviews with elderly}
+
+As Stahl et al. 2008 stated, user involvement leads to research of grater relevance to people and the findings more likely to be implemented.~\cite{Stahl2008} Their research is all based on the problems identified by elderly people and therefore of great relevance. Also for this study the involvement of elderly with a rollator was perceived as important. For the conducting researcher to be young and not having any experiences with mobility problems, it was key to hear from first hand. The first intention was to interview at least 20 elderly in Amsterdam, that walk outside regularly with a rollator. Unfortunately, this seemed harder then firstly assumed. Elderly care houses were not keen on cooperating. Calling would often result into a redirection to the location manager and no answer to the e-mails. Some institutions did show some enthusiasm. The Flessenoord and .. were willing to cooperate, but could only provide 3 participants who walked outside with the rollator. One participant was not available in the end. The Buurtzorg Centrum were also enthusiastic. After several calls and e-mails, they never responded with possible contacts for participants. In the end the short interviews at the Rollatorloop gave a bit more insight. Though, these interviews were conducted rather quickly without any control system.
+
+The participants that did answer already showed how strong the influence of the personal preferences has on the perception to its surroundings. One of the participant really likes walking while the other rather stays inside. This strongly influenced their feelings and emotions they had to walking outside. Through this we can say there is a lot of differences in rollator users. Perception of safety is different for every individual. Very personal determinants. 
+
+
+When going to the Rollatorloop, noticed was that there are a lot of different rollators. This research did not take into account the different type of rollators available. Thought, the type of wheels and structure of frame might really influence the measurements and can result in different data characteristics.
+
+% ?Safety, robbery and perception of safety are hard to classify (hang jeugd)
+
+
+\subsection{The Accelerometer sensor}
+The application, Physics Toolbox Accelerometer, was a good application and easy to use for measure the accelerometer sensor of the phone. However, the first versions of the application made the app stop measuring when the phone went in sleeping mode. The test rides done on the bike could have been done better. Also the exploration of the test data was too quick and roughly done for the researcher was not familiar with these kind of datasets. A better planning of experiments was needed, and a more clear focus in the first stage of the experiments was lacking. The overall time planning was weak. After a more in depth research into the application behaviour and settings and contacting the developer, more controlled knowledge was gathered about the working of the application. Now, after the application version change and the improvement of the application, it is perfect for using it in this kind of research. If more time was available, again elderly could have been contacted to do the same kind of measurements again. With the Leica and a good working accelerometer application. 
+
+The accuracy or errors from the accelerometer are unknown, as the quality of the sensor in the phone is unknown and not researched. Also the exact meaning of the application values are unknown. These could not be tested, as no good reference accelerometer sensor was available. Overall the outcome of the measurements seemed quite credible. Also the tests with putting the accelerometer flat on the table, did not show any weird peaks or deviations. 
+
+
+\subsection{Influenced experiments}
+After the failed measurements, the researcher herself conducted some extra walks. This could give a wrong image on the measured walking behaviour outcome. From Wang et al. we learned that there is no difference in walking gait characteristics between elderly and young people.~\cite{Wang2015} But that elderly are more used to handling a rollator compared to young people, for which a rollator could be an obstacle in moving more easily. Walking with the rollator myself could have influenced the outcomes. 
+
+
+\subsection{Spatial accuracy, detail is key}
+The GPS on the phone not exact enough. This resulted in wrong extraction of data values from the AHN2 and the slope raster. So these change points did not represent the true values for the location. 
+
+No hard conclusions can be drawn for the accuracy is not known. 
+
+
+
+\subsection{changepoitn method}
+Now, the urban environment will never be optimal, so certain change points will indicate not so important happenings. 
+
+starten met lopen, is een harde duw tegen de rollator? waardoor er een piek in de accelerometer data ontstaat. 
+
+
+
+
+Could not use trend, seasonality and random analysis, for no seasonality in the data. Surface hindrance changes per surface. Obstacles show more as abnormalities. BFASTt method. BFAST, Breaks For Additive Season and Trend, integrates the decomposition of time series into trend, season, and remainder components with methods for detecting and characterizing change within time series. BFAST & BFASTmonitor: http://bfast.r-forge.r-project.org/ 
+\section{Reccomendations} %hoe nu verder. Wat meer? LIJST
+
+Recommendations to improve this study
+\begin{itemize}
+
+\item Conduct more interviews with elderly living in Amsterdam and walking with a rollator outdoors, to get a better understanding of the location specific problems. Thoug, trough the literature research and the few interviews held, already a good insight is presented. 
+
+\item In order to conduct a goo pedestrian area classification, it would have been better not to include parking plots into the pedestrian area. Comparing the classification methods with manual classification could have said more about the accuracy of the method. But was too time consuming for this research. 
+
+\item Conduct more controlled experiments with elderly themselves. Also comparing routes walked in a controlled environment against routes walked in the real living environment. This can give better insights if this methods works for detecting obstacles along the real walking routes of elderly, when walked by themselves. Instead of a young vital person walking with a rollator. 
+
+\item Use better GPS systems, like the Leica stystem for location determination. The detail for which the detection of obstacles is needed, has to be very precise. The slightest deviation can give falsehoods in the change point detection for slope. The research of Wang et al.~\cite{Wang2015} uses exact accelerometer to monitor the displacement for every step made. By using this method the route of a person could be exactly determined from the starting point, with an accuracy of about 1 cm and no GPS would be needed. This would also require a standard measure rollator were the exact distances of the sensor to the wheels and frame has to be known.
+
+\item The AHN2 promised good possibilities to detect surface quality and sloping pavements. Even the detection of curbs and ramps could be possible. More research to the application and possibilities of the AHN2 can be interesting.
+\end{itemize}
+Recommendations for future research:
+\begin{itemize}
+\item Find a possible way to quantify the relation between surface hindrance and the effort needed for elderly with a rollator to walk on. For example measuring energy use of elderly. Also the perception of elderly to different surface circumstances could be measured. An interesting link could be the report from Hogertz et al. 2010~\cite{Sauter2010}, which tries to measure skin conductivity as a quantitative measure for arousal. 
+
+Possible applications of smart phone with accelerometer use, for measuring rollator movements or surface resistance. Translate this to the amount of energy that elderly consume. 
+
+\item
+Possible applications might be to detect the kind of surface material from the accelerometer signatures. Create a specific signature for a specific surface material. What has to be taken into account is the different set of rollators that exists. Which react differently to surface irregularities.
+
+
+\item This study could be used to create a low cost, non-intrusive method for identifying the location of obstacles on the route of elderly with a rollator. A more in detail method could be designed, that automatically filters out priority obstacles where the data changes in a specific way. 
+
+\item using the change point method and regarding a route as a time series dataset could be an interesting method to detect walking behaviour, driving behaviour changes. 
+
+\item Detecting wrongly parked bikes and cars. or raise more awareness under citizens about the problems they cause when parking their bikes wrong. I noticed I never thought about the placement of my bike in relation to the rest of the pavement until I started this project. It makes you look with different eyes and makes you more aware of were to park your bike so enough space is left for others to pass through.  
+
+\end{itemize}
+
+
+
+
+
+
+\section{Final words}
+
+It is proven that for elderly, who are more vulnerable, environmental attributes can be barriers to an active engagement in urban life. The quality of the immediate environment is a significant determinant of elders well-being, independence and quality of life. Developing ways to quantify their problems and add more data on their walkability quality could lead to more insight and hopefully to interventions on pavement level. In the near future, there will be more elderly who are willing to live independently and grow old in their own home. In order to facilitate this, we have to look forward and adapt the environment now when we are still young. 
+
+
+
+
+
+
+
+
+
+ 
+

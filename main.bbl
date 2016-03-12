@@ -1,18 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{mysports}
-
-
-\bibitem{ahnformula}
-
-
-\bibitem{ahnformula2}
-
-
-\bibitem{countryReport}
-{PQN Country Report The Netherlands}.
-\newblock 2010.
-
 \bibitem{gbka}
 Gemeente Amsterdam.
 \newblock Grootschalige basiskaart amsterdam (gbka).
@@ -21,7 +8,7 @@ Gemeente Amsterdam.
 Gemeente Amsterdam.
 \newblock Handboek puccini methode, inrichting openbare ruimte, onderdeel
   verharding.
-\newblock 2014.
+\newblock Technical report, 2014.
 
 \bibitem{Annear2014}
 Michael Annear, Sally Keeling, Tim Wilkinson, Grant Cushman, Bob Gidlow, and
@@ -29,6 +16,13 @@ Michael Annear, Sally Keeling, Tim Wilkinson, Grant Cushman, Bob Gidlow, and
 \newblock {Environmental influences on healthy and active ageing: a systematic
   review}.
 \newblock {\em Ageing and Society}, 34(04):590--622, 2014.
+
+\bibitem{Ballester2011}
+Miquel~Ginard Ballester.
+\newblock Universal walkability assessment of urban pedestrian networks, the
+  mallorcan case study.
+\newblock {\em Master of Science in Geographical Information Management &
+  Applications (GIMA MSc)}, 2011.
 
 \bibitem{Bartholmew2011}
 L~K Bartholomew, G~S Parcel, G~Kok, N.~H. Gottlieb, and M.E. Fernández.
@@ -53,6 +47,10 @@ Hieronymus~C. Borst, Henk~M.E. Miedema, Sanne~I. de~Vries, Jamie~M.a. Graham,
 Bossink.
 \newblock {Structuurvisie Amsterdam 2040 Economisch sterk en duurzaam}.
 \newblock 2011.
+
+\bibitem{mysports}
+MySports B.V.
+\newblock My sports, bring sports to life.
 
 \bibitem{Clarke2011}
 Philippa~J Clarke, Jennifer~A Ailshire, Els~R Nieuwenhuijsen, and Marijke~W {De
@@ -89,6 +87,14 @@ Eli Einbinder and Tristan~a Horrom.
 \newblock {Smart Walker: A tool for promoting mobility in elderly adults.}
 \newblock {\em Journal of rehabilitation research and development},
   47(9):xiii--xv, 2010.
+
+\bibitem{ahnformula2}
+ESRI.
+\newblock How curvature works.
+
+\bibitem{ahnformula}
+ESRI.
+\newblock How slope works.
 
 \bibitem{OECD2001}
 Organisation for Economic Co-operation and Development.
@@ -160,6 +166,13 @@ Merja Rantakokko, Minna M\~{A}¤nty, Susanne Iwarsson, Timo T\~{A}¶rm\
 \newblock {\em Journal of the American Geriatrics Society}, 57(4):634--640,
   2009.
 
+\bibitem{countryReport}
+Tineke~Hof Rob~Methorst, Maartje de~Goede and Chatal Groeneweg.
+\newblock In: Methorst r., monterde i bort h., risser r. sauter d., tight m. &
+  walker j. (eds.) (2010) pedestrians' quality needs. country reports - 14. the
+  netherlands.
+\newblock 2010.
+
 \bibitem{Rosenberg2013}
 Dori~E. Rosenberg, Deborah~L. Huang, Shannon~D. Simonovich, and Basia Belza.
 \newblock {Outdoor built environment barriers and facilitators to activity
@@ -175,8 +188,9 @@ Andrea~L Rosso, Amy~H Auchincloss, and Yvonne~L Michael.
 
 \bibitem{Sauter2010}
 Daniel Sauter, Carsten Hogertz, Miles Tight, Rachel Thomas, and David Zaidel.
-\newblock {Pedestrians' Quality Needs Measuring Walking PQN Final Report - Part
-  B4: Documentation}.
+\newblock In: Methorst r., monterde i bort h., risser r. sauter d., tight m. &
+  walker j. (eds.) (2010) pedestrians' quality needs. part b4: Measuring
+  walking.
 \newblock Technical report, COST Office, 2010.
 
 \bibitem{Stahl2013}
@@ -225,7 +239,8 @@ VeiligheidNL.
 \bibitem{Verschuur2013}
 Mark Verschuur.
 \newblock A gis approach to monitor accessibility of public urban space for the
-  elderly, 2013.
+  elderly.
+\newblock 2013.
 
 \bibitem{Vine2012}
 Desley Vine, Laurie Buys, and Rosemary Aird.

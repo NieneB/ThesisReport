@@ -1,118 +1,60 @@
 \section{Method RQ 2C - Mapping abnormal or change events with change point detection using Accelerometer, GPS and AHN2 data}
 
-Assuming that in the optimal circumstances, someone will walk with a specific speed in a monotonous way. Then, an \emph{abnormal} event in continuous data will indicate a problem or obstacle. 
+Assuming that in the optimal circumstances, someone will walk with a specific speed in a monotonous way and the pavement has a continues surface, the measured acceleration in the z-axis will show a continuous pattern. An \emph{abnormal} peak in the continuous data will indicate a problem or obstacle in the pavement surface. Next to this, a sudden change in the walking speed of the person, could indicate a disturbance of the walking route. Together, a sudden drop in speed, plus a peak in the z-axis acceleration, could indicate big bumb or obstacle which causes a change in the walking behaviour of the pedestrian. For example, tackling a curb obstacle with the rollator. 
 
-\begin{description}
-\item[Hypotheses 1] : Obstacles, curbs or bumps cause a sudden change in the walking behaviour and so can be seen by analysing the accelerometer and GPS time series and filtering out abnormal events in the time series.  
-\item[Criteria]: 
-\begin{itemize}
-\item Sudden drop in speed.
-\item Large change in all 3 axis of accelerometer or total acceleration. 
-\item Sudden increase or change in slope or curvature. 
-\end{itemize}
-\end{description}
+By looking at the changes or anomalies in the time series data of speed, slope and z-axis acceleration measured during a walk and linking them to location trough GPS measurements, the physical obstacles or hindrances can be located. The changes or anomalies in time-serie data can be determined by the change-point package of R containing specialized change-point finding algorithms for detecting multiple change-points within data and a variety of test statistics.~\cite{changepoint2015,  killick2014} A change point is the estimation of the point at which the statistical properties(mean or variance) of a sequence of observations changes.
 
-Going from one kind of surface to another will show a change in the vibrations. Also walking over a bump will show an abnormal peak in the measured acceleration. These changes in the vibrations of the axes can be determined by the change-point package of R containing specialized change-point finding algorithms for detecting multiple change-points within data and a variety of test statistics.~\cite{changepoint2015,  killick2014} 
+\subsection{The changepoint package}
+%the change point package and possible methods
+The ChangePoint package of Killick et al. 2014 contains functions to detect multiple changes in the mean or the variance of large datasets. First we will explain the concept of change-points and the segment in between. Then, the methods offered by the package will be explained and the possibility to choose different statistical models for penalty fitting. The exact approach of identifying multiple change-points, formulas, methods and references can be found in the report of the changepoint package by Killick et al. 2014~\cite{killick2014}
 
-The package contains functions to detect changes in the mean or the variance of the data. A change point is the estimation of the point at which the statistical properties(mean or variance) of a sequence of observations changes. Having an ordered sequence of data $y_{1:n} = (y_{1}, .... , y_{n})$, a change-point is said to occur within this set when there exists a time, $τ ∈ {1, . . . , n − 1}$,such that the statistical properties of segment ${y_{1}, .... , y_{τ}}$ and segment ${y_{τ+1}, .... , y_{n}}$ are different in some way. Consequently the $m$ change-points will split the data into $m + 1$ segments, with the $i^th$ segment containing data $y_{(τ_{i−1} +1):τ_{i}}$ . Each segment will be summarized by a set of parameters.~\cite{killick2014}
+%change points and segments
+Having an ordered sequence of data $y_{1:n} = (y_{1}, .... , y_{n})$, a change-point is said to occur within this set when there exists a time, $τ ∈ {1, . . . , n − 1}$, such that the statistical properties of segment ${y_{1}, .... , y_{τ}}$ and segment ${y_{τ+1}, .... , y_{n}}$ are different in some way. Consequently the $m$ change-points will split the data into $m + 1$ segments, with the $i^th$ segment containing data $y_{(τ_{i−1} +1):τ_{i}}$ . Each segment will be summarized by a set of parameters.~\cite{killick2014} Possible is to use the two sides: the change-points $CP_{1:m} = (CP_{1}, .... , CP_{m})$ themselves and the segments $y_{(CP_{i−1} +1):CP_{i}}$ between the change-points. Each, with its own set of parameters. 
+The average variance or mean of the segment indicates the homogeneous  characteristics of the dataset, between the change-points. 
 
-% changing $y$ to $f$ for better distinction between y ax and data range ?
+%possible methods
+The Changepoint package implements three multiple change-point algorithms; Binary Segmentation(BS), Segment Neighbourhoods(SN) and the Pruned Exact Linear Time(PELT). Binary Segmentation is an approximate algorithm and most widely used search method. Segment Neighbourhoods has a long computation time but is more exact. PELT is computationally fast and exact. The number of change-points increases linearly as the data set increases. All the different change point detection methods and penalty values had to be tested to see which model approaches the most plausible result and approaches the truth the best. This was shortly done for all individual dataset. Also the best possible penalty settings are considered, for there can be a big difference in characteristics of the dataset for speed, slope and acceleration. 
+%penalty
 
+The penalty settings are used to prevent the model for over fitting. Several statistical models are available, BIC, AIC or Hanan-Quinn. The penalty settings can discourage over fitting and increases the number of parameters in the model to almost always improve the goodness of fit. When over or under-fitting occurs, we adjusted the penalty. Especially in the speed and slope datasets, over-fitting was a problem. Extreme peaks or graduated steps in the speed are due to measurement errors in the GPS. If a model fits too well, these are taken as truth, the penalty settings can even out those extreme measurements. Most often the penalty was set to $1.5 * log(n)$. 
+% ### Because of overfitting the model of speed a penatlyt type of BIC AIC or Hanan-Quinn can be chosen to solve the problem of overfitting.
+% ##  a penalty term for the number of parameters in the model; the penalty term is larger in BIC than in AIC.
+% ##he penalty discourages overfitting (increasing the number of parameters in the model almost always improves the goodness of the fit).
+% ## we use an adjusted penalty to overcome the problem of overfitting. The GPS contains abonormal peaks due to measurement errors. If a model is generated that fits too well, these are taken as truth. Using a penalty these extreme measurments are not taken into the analysis. These are plausibly artifacts of the data rather
+% ## than true changes in the underlying process. In an effort to remove these seemingly spurious changepoints we can increase the penalty to 
+% ## The result seem more plausible. 
 
+\subsection{Routes measured}
+For testing if the change-point method is usable for detecting obstacles while walking, several test were walked, during the RollatorLoop 2015.
+We used the Garmin Summit for the participants and the Leica system on the Meetrollator. 3 smart phones with the Accelerometer (Physics Toolbox version 1.2.9 were used. Here all the accelerometer measurements failed because or the wrong application version.  See Annex \ref{Afailed} for the measured tracks and the accelerometer output. Eventually, the failed measurement with the Leica system, could be used for analysing speed and slope. But the accelerometer was left out here. Also, half way the route, the Leica system stopped walking. Therefor only half of the route was measured. See figure\ref{leicatracks} for the route.
+So, secondly a bike ride was monitored for testing the application settings again, with the Accelerometer (Physics Toolbox version 1.3.7) and the GPS Geotracker Application to record GPS. When this seemed to work, also a walk with the measurement rollator was conducted by the researcher herself. Using the Accelerometer (Physics Toolbox version 1.3.7) and the Garmin Summit. Both tracks are shown in figure \ref{tracks}.
 
-The changepoint package implements three multiple change-point algorithms; Binary Segmentation(BS), Segment Neighbourhoods(SN) and the Pruned Exact Linear Time(PELT). Binary Segmentation is an approximate algorithm and most widely used search method. Segment Neighbourhoods has a long computation time but is more exact. PELT is computationally fast and exact. The number of change-points increases linearly as the data set increases. The exact approach of identifying multiple change-points, formulas, methods and references can be found in~\cite{killick2014}
-
-	
-For this research the 2 sides of the change points are used; the change-points $CP_{1:m} = (CP_{1}, .... , CP_{m})$ themselves and the segments $y_{(CP_{i−1} +1):CP_{i}}$ between the change-points. Each, with its own set of parameters. For the vibrations measured by the accelerometer, the change-points indicate an abnormal event while the segments between the change-points indicate a phase of monotonous movement or monotonous surface. 
-
-
-For the accelerometer data always has the mean around the same number, the degree of hindrance or occurrence of an obstacle, will show more in the variance of the data. 
-
-
-The changes are detected using the exact multiple change-point method (PELT or SegNeigh) or approximate (BinSeg) methods. ~\cite{changepoint2015}\newline
-
-For testing if the change-point method is usable for detecting obstacles while walking, a bike ride was monitored and a walk with the measurement rollator. 
-Several more test were walked, during the RollatorLoop 2015, but these measurements failed. See Annex \ref{Afailed} for the measured tracks and the accelerometer output. 
-
-The tracks measured with the geoTracker application and the Accelerometer application on the smart phone which did succeeded are shown in figure \ref{tracks}. 
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{img/M_map_routes.pdf}
+\begin{figure}[hb]
+\includegraphics[width=\textwidth]{img/M_overviewRouteLeica.pdf}
 \centering
-\caption{ Map of both tracks used \label{tracks}}
+\caption{ Map of Leica route in Amsterdam\label{leicatracks}}
 \end{figure}
 
-\subsection{Segments between change points}
-The average variance of the segment indicates the surface characteristics. If combined with the location, the values indicate characteristics of the walk and walk changes. Even the location specific characteristics can be extracted to the time-series observations.
-
-The feature vector for every $i^th$  observation for the 3-axis signal is represented by:
-
-\begin{equation}
-F_{xyz}(i) = [ x, y, z, A_{m}, Var(A_{z}), Var(A_{m})]  %% and all other stuff needed. 
-\end{equation}
-
-To this we could add the average variance per segment between the change-points:
-
-\begin{equation}
-F_{xyz}(seg) = [Var(A_{z}), Var(A_{m})]
-\end{equation}
-
-For reference, the change-points are linked to the location by using the time-stamp of the accelerometer and the GPS points. With the time stamp, the first GPS point before and the first GPS point after that time is taken. Because the time difference between the first GPS point and the change point is known and the speed between the GPS points $(s)$, the distance and so location of the change point is calculated. 
-
-\begin{figure}[h]
-\includegraphics[width=0.75\textwidth]{img/M_location_calc.pdf}
-\centering
-\caption{Graphical explanation of change point location calculations \label{cpcalc}}
-\end{figure}
-
-With coordinates ($x_{1}, y_{1}$) and  ($x_{2}, y_{2}$) in RDnew as the known first and second GPS point, respectively. 
-
-Distance between $(x_{1}, y_{1})(x_{2}, y_{2})$:
-\begin{equation}
-d_{1,2} = \sqrt (y_{1}-y_{2})^2 + (x_{1}-x_{2})^2 
-\end{equation}
-
-Distance between $(x_{1}, y_{1})(x_{cp}, y_{cp})$:
-\begin{equation}
-d_{1,cp} = s * time difference((x_{1}, y_{1}) - (x_{cp}, y_{cp}))
-\end{equation}
-
-New $x$ coordinate:
-\begin{equation}
-x_{cp} = x_{1} +  \frac{d_{1,cp}}{d_{1,2}} * (x_{2} - x_{1})
-\end{equation}
-
-New $y$ coordinate:
-\begin{equation}
-y_{cp} = y_{1} +  \frac{d_{1,cp}}{d_{1,2}} * (y_{2} - y_{1})
-\end{equation}
-
-
-Now we can also add the location specific data to the accelerometer segments, the speed($S$) extracted from the track GPS points and the AHN values, height, slope and curvature. Resulting in a feature per observation of:
-
-
-	\begin{equation*} F_{xyz}(i) = \end{equation*}
-	\begin{equation*}[ A_{x}, A_{y}, A_{z}, A_{m}, Var(A_{z}), Var(A_{m}), \end{equation*}
-	\begin{equation} Var(A_{z seg}), Var(A_{mseg}) , s, height, slope, curvature ] \end{equation}
-
-And the average values for the segments between the change-points:
+The datasets of the accelerometer are combined with the location dataset of the GPS measurements. The location assigning is done with the same method as described in the previous section \ref{locationassigning}. Also here the location specific data was added to the dataset, the speed($S$) extracted from the track GPS points and the AHN values, height and slope. Resulting in a feature per observation of:
 
 \begin{equation} 
-F_{xyz}(seg) = [ Var(A_{z}), Var(A_{m}), Var(A_{z seg}), Var(A_{mseg}) , A_s, A_height, A_slope, A_curvature ] 
+	F_(i) = [ Time stamp, A_{x}, A_{y}, A_{z}, A_{m}, s, height, slope] 
 \end{equation}
 
-With cross correlation between the several features, we can detect which feature best represents the walk characteristics. 
-
-By doing a cross correlation with the Z-axis and the X and Y axis a similarity between the lateral acceleration, mostly caused by the surface, and the gait acceleration is detected. The cross correlation of the $x$ and $z$ axis is expressed by:
+The dataset per route was approached as a time-series dataset to applying the change point method. Each route and data range on the route had its own specific settings to get the best model of fit. Eventually this resulted in a change point feature for every $m^(th)$ change point observation:
 
 \begin{equation}
-Corr_{z,x} = \sum z(n)x(n-1)  %blablabla wat doe ik hiermee? 
+CP_m = [ breakpoint index, mean, variance, time, x,y]
 \end{equation}
+This is applicable to the acceleration, speed, slope and height. The change-points are detected with the variance setting for the acceleration and mean for change-points detection for speed, height and slope: 
 
-\subsection{Comparing change-points}
-The change-points detected in the accelerometer data can be compared against change-points that occur in the speed, slope or the height data. To see if any correlation exists. Assuming that speed decreases when one has to take an obstacle, the slope increases and vibration increases. 
-First the change-points are detected with the variance and mean change-points detection for speed, height, slope and curvature. The time difference or the distance difference indicates how close the change-points are to each other. If the change-points are close it indicates an abnormal event in multiple data sources, which could indicates an obstacle. 
+$CP_{mean(s)}, CP_{Var(A_{z})}, CP_{Var(A_{m})}$ and $CP_{mean Height}, CP_{mean slope}$ 
 
-So there are change points in the accelerometer, speed, and AHN data: $CP_{mean(s)}, CP_{Var(s)}, CP_{Var(A_{z})}, CP_{Var(A_{m})}, CP_{Height}, CP_{slope}$ and $CP_{curvature}$. With all change-points having location coordinates($x,y$) in RD new and a time stamp. 
+With all change-points having location coordinates($x,y$) in RD new and a time stamp. When plotting all change points on the map, visually, patterns in the route can be detected.
 
-% Distance to the closest point location. RMSE? maybe? RMSE of the distances between the points. 
+\begin{figure}[ht]
+\includegraphics[width=\textwidth]{img/M_overviewRoute.pdf}
+\centering
+\caption{ Map of tracks measured in Wageningen\label{tracks}}
+\end{figure}
+

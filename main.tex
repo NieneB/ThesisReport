@@ -1,13 +1,40 @@
-\documentclass[10pt,a4paper, titlepage, onecolumn, openright, oneside, fleqn]{scrreprt}  %twoside 
+\documentclass[10pt,a4paper, titlepage, onecolumn, openright, twoside, justified, parskip=full, fleqn, abstract, unicode=true, pdfencoding=auto,x11names, noindent, BCOR=-0.2mm, DIV=calc]{scrreprt}  %twoside 
+
+% final, twoside, BCOR=-0.2mm, DIV=calc, openright, a4paper, abstract, toc=bibliography,toc=listof,unicode=true,pdfencoding=auto,x11names
+
+%Packages
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{float}
 \usepackage{rotating}
+\usepackage{scrhack}
+\usepackage{amsmath}
+% \usepackage{showframe}
+% \usepackage{parskip}
+\usepackage[hscale=0.69,vscale=0.79,heightrounded,includehead]{geometry} %bindingoffset=8mm
+
 \usepackage{pdflscape}
 \usepackage[official]{eurosym}
+\usepackage{booktabs}
+%Rules
 
-% \pagestyle{plain}
-% %\addtolength{\topmargin}{-2cm}
-% \addtolength{\textheight}{2cm}
+\overfullrule=2cm
+
+\renewcommand*{\chapterheadendvskip}{%
+  \vspace{-0.192\baselineskip plus 0.115\baselineskip minus 0.192\baselineskip}%
+}
+
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.5}
+
+
+% \renewcommand*{\sectionheadendvskip}{%
+%   \vspace{-0.75\baselineskip plus 0.115\baselineskip minus 0.192\baselineskip}%
+% }
+% \renewcommand{\arraystretch}{1.5}
+% \renewcommand{\tabcolsep}{0.2cm}
+% \addtowidth{\textwidth}{2cm}
 
 \begin{document} 
 	
@@ -19,7 +46,7 @@
 	\author{Niene Boeijen}
 
 	% \maketitle
-
+	
 	\begin{titlepage}
 		\vspace*{-3cm}
 		\Large Centre for Geo-Information \vspace*{0.5cm}
@@ -91,16 +118,17 @@
 		
 	\end{titlepage}
 
-	\cleardoubleemptypage
-
-
+	\cleardoublepage
 	\tableofcontents
 	\listoffigures 
+	
+	 \cleardoubleevenemptypage
 	\listoftables 
-	\include{abstract} 
+	\include{abstract}
 
+	\cleardoublepage
 	\pagenumbering{arabic}
-
+	
 	\include{Chapter1} 
 	\include{Chapter2} 
 	\include{Chapter3} 

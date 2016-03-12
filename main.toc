@@ -2,81 +2,91 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}
 \contentsline {subsection}{\numberline {1.1.1}Challenges for an ageing population}{1}
 \contentsline {subsection}{\numberline {1.1.2}Elderly pedestrians}{2}
-\contentsline {subsection}{\numberline {1.1.3}The Rollator}{3}
+\contentsline {subsection}{\numberline {1.1.3}The Rollator}{2}
 \contentsline {subsection}{\numberline {1.1.4}Mobility problems}{3}
-\contentsline {subsection}{\numberline {1.1.5}The contribution of the built environment to walkability}{5}
-\contentsline {section}{\numberline {1.2}Problem definition}{6}
-\contentsline {subsection}{\numberline {1.2.1}The forgotten pedestrian in policy}{6}
-\contentsline {subsection}{\numberline {1.2.2}The forgotten pedestrian in research}{7}
-\contentsline {subsection}{\numberline {1.2.3}The forgotten pedestrian in data}{7}
-\contentsline {subsection}{\numberline {1.2.4}GIS opportunities}{8}
-\contentsline {subsection}{\numberline {1.2.5}Lack of detail in (geo) data}{8}
-\contentsline {section}{\numberline {1.3}Goal \& Objectives}{8}
-\contentsline {section}{\numberline {1.4}Report Structure}{9}
-\contentsline {chapter}{\numberline {2}Background theory and concepts}{10}
-\contentsline {section}{\numberline {2.1}Pedestrians}{10}
-\contentsline {subsection}{\numberline {2.1.1}Walking behaviour}{10}
-\contentsline {section}{\numberline {2.2}Walkability factors}{12}
-\contentsline {section}{\numberline {2.3}Puccini Method}{13}
-\contentsline {section}{\numberline {2.4}Related literature}{14}
-\contentsline {subsection}{\numberline {2.4.1}Critical walking factors for elderly with a Rollator}{15}
-\contentsline {subsection}{\numberline {2.4.2}The Smart Walker}{15}
-\contentsline {subsection}{\numberline {2.4.3}Using an accelerometer for rollator monitoring}{15}
-\contentsline {subsection}{\numberline {2.4.4}Outdoor quality for Wheelchair users}{16}
-\contentsline {subsection}{\numberline {2.4.5}Elderly perception of the outdoor environment}{17}
-\contentsline {chapter}{\numberline {3}Data and Methods}{18}
+\contentsline {subsection}{\numberline {1.1.5}The contribution of the built environment to walkability}{4}
+\contentsline {section}{\numberline {1.2}Problem definition}{5}
+\contentsline {subsection}{\numberline {1.2.1}The forgotten pedestrian in policy}{5}
+\contentsline {subsection}{\numberline {1.2.2}The forgotten pedestrian in research}{6}
+\contentsline {subsection}{\numberline {1.2.3}The forgotten pedestrian in data}{6}
+\contentsline {subsection}{\numberline {1.2.4}GIS opportunities}{7}
+\contentsline {subsection}{\numberline {1.2.5}Lack of detail in (geo) data}{7}
+\contentsline {section}{\numberline {1.3}Goal \& Objectives}{7}
+\contentsline {section}{\numberline {1.4}Report Structure}{8}
+\contentsline {chapter}{\numberline {2}Background theory and concepts}{9}
+\contentsline {section}{\numberline {2.1}Pedestrians}{9}
+\contentsline {section}{\numberline {2.2}Puccini Method}{9}
+\contentsline {section}{\numberline {2.3}Walking behaviour}{10}
+\contentsline {section}{\numberline {2.4}Walkability factors from literature}{11}
+\contentsline {section}{\numberline {2.5}Related literature for methodology}{13}
+\contentsline {subsection}{\numberline {2.5.1}Mapping walkability}{13}
+\contentsline {subsection}{\numberline {2.5.2}The Smart Walker}{14}
+\contentsline {subsection}{\numberline {2.5.3}Concluding}{15}
+\contentsline {chapter}{\numberline {3}Data and Methods}{17}
 \contentsline {section}{\numberline {3.1}Study area}{18}
-\contentsline {section}{\numberline {3.2}Method RQ 1 - Finding the critical factors for walkability}{20}
-\contentsline {subsection}{\numberline {3.2.1}Literature study}{20}
-\contentsline {subsection}{\numberline {3.2.2}Interviews}{20}
-\contentsline {subsection}{\numberline {3.2.3}Rollator Loop - Average walking speed}{21}
-\contentsline {section}{\numberline {3.3}Method RQ 2A - Collection and analysis of available geodata}{22}
-\contentsline {subsection}{\numberline {3.3.1}Data Collection and Pre-processing - Topology}{22}
-\contentsline {subsection}{\numberline {3.3.2}Analysis - Determining pedestrian area with GBKA}{22}
-\contentsline {subsection}{\numberline {3.3.3}Data Collection and Pre-processing - AHN}{24}
-\contentsline {subsection}{\numberline {3.3.4}Analysis - Mapping sloping surfaces with AHN data}{24}
-\contentsline {subsubsection}{\nonumberline First derivative - Slope}{24}
-\contentsline {subsubsection}{\nonumberline Second derivative - Curvature}{24}
-\contentsline {section}{\numberline {3.4}Method RQ 2B - Collection geodata of rollator movements and analysis}{26}
-\contentsline {subsection}{\numberline {3.4.1}Data Collection - Accelerometer}{26}
-\contentsline {subsubsection}{\nonumberline Application version change}{26}
-\contentsline {subsection}{\numberline {3.4.2}Data Pre-processing - Accelerometer}{26}
-\contentsline {subsection}{\numberline {3.4.3}Data Collection - GPS}{28}
-\contentsline {subsection}{\numberline {3.4.4}Data Pre-processing - GPS}{29}
-\contentsline {subsection}{\numberline {3.4.5}Data Collection - Movie material}{30}
-\contentsline {subsection}{\numberline {3.4.6}Analysis - Mapping irregular surfaces with an Accelerometer}{30}
-\contentsline {subsubsection}{\nonumberline Set-up}{30}
-\contentsline {subsubsection}{\nonumberline Statistics}{32}
-\contentsline {subsubsection}{\nonumberline Comparison with Matthews et al. (2003)}{33}
-\contentsline {section}{\numberline {3.5}Method RQ 2C - Mapping abnormal or change events with change point detection using Accelerometer, GPS and AHN2 data}{34}
-\contentsline {subsection}{\numberline {3.5.1}Segments between change points}{35}
-\contentsline {subsection}{\numberline {3.5.2}Comparing change-points}{37}
-\contentsline {chapter}{\numberline {4}Results}{38}
-\contentsline {section}{\numberline {4.1}Results RQ 1. - Finding the critical factors for walkability}{38}
-\contentsline {subsection}{\numberline {4.1.1}Findings critical factors from literature}{38}
-\contentsline {subsection}{\numberline {4.1.2}Summary personal interviews}{38}
-\contentsline {subsection}{\numberline {4.1.3}Summary interviews at Rollator Loop}{41}
-\contentsline {subsection}{\numberline {4.1.4}Findings Amsterdam policy and summary interview municipality}{41}
-\contentsline {subsection}{\numberline {4.1.5}Final list critical factors}{42}
-\contentsline {subsection}{\numberline {4.1.6}Average walking speed}{43}
-\contentsline {section}{\numberline {4.2}Results RQ 2A - Collection and analysis of available geodata}{45}
-\contentsline {subsection}{\numberline {4.2.1}Determining pedestrian area with the GBKA}{45}
-\contentsline {subsection}{\numberline {4.2.2}Mapping sloping surfaces with AHN data}{47}
-\contentsline {section}{\numberline {4.3}Results RQ 2B- Collection of geodata of rollator movements and analysis}{49}
-\contentsline {subsection}{\numberline {4.3.1}Mapping irregular surfaces with an Accelerometer}{49}
-\contentsline {subsection}{\numberline {4.3.2}Comparison with Matthews et al. 2003}{52}
-\contentsline {section}{\numberline {4.4}Results RQ 2C - Mapping abnormal or change events with Accelerometer, GPS and AHN2 data}{54}
-\contentsline {subsection}{\numberline {4.4.1}Comparing different Change Point detection methods}{54}
-\contentsline {subsection}{\numberline {4.4.2}Segments}{56}
-\contentsline {subsection}{\numberline {4.4.3}Change points}{59}
-\contentsline {chapter}{\numberline {5}Discussion and conclusions}{62}
-\contentsline {chapter}{\numberline {A}Appendix}{68}
-\contentsline {section}{\numberline {A.1}Walkability criteria total overview}{68}
-\contentsline {section}{\numberline {A.2}Puccini Map Amsterdam}{74}
-\contentsline {section}{\numberline {A.3}Questionnaire}{76}
-\contentsline {section}{\numberline {A.4}Accelerometer app alternatives}{87}
-\contentsline {section}{\numberline {A.5}Interviews with elderly list of possible obstacles}{88}
-\contentsline {section}{\numberline {A.6}Failed measurements}{90}
-\contentsline {section}{\numberline {A.7}Jordaan road classification total}{92}
-\contentsline {section}{\numberline {A.8}Detail of AHN2 of Jordaan}{95}
-\contentsline {section}{\numberline {A.9}Change Point methods tests for Speed}{97}
+\contentsline {section}{\numberline {3.2}Method RQ 1 - Finding the critical factors for walkability}{19}
+\contentsline {subsection}{\numberline {3.2.1}Literature study}{19}
+\contentsline {subsection}{\numberline {3.2.2}Interviews}{19}
+\contentsline {subsection}{\numberline {3.2.3}Rollator Loop - Average walking speed}{20}
+\contentsline {section}{\numberline {3.3}Method RQ 2A - Collection and analysis of available geodata}{21}
+\contentsline {subsection}{\numberline {3.3.1}Data Collection and Pre-processing - Topology}{21}
+\contentsline {subsection}{\numberline {3.3.2}Analysis - Determining pedestrian area with GBKA}{21}
+\contentsline {subsection}{\numberline {3.3.3}Data Collection and Pre-processing - AHN}{22}
+\contentsline {subsection}{\numberline {3.3.4}Analysis - Mapping sloping surfaces with AHN data}{23}
+\contentsline {subsubsection}{\nonumberline First derivative - Slope}{23}
+\contentsline {section}{\numberline {3.4}Method RQ 2B - Collection geodata of rollator movements and analysis}{24}
+\contentsline {subsection}{\numberline {3.4.1}Data Collection - GPS}{24}
+\contentsline {subsection}{\numberline {3.4.2}Data Pre-processing - GPS}{24}
+\contentsline {subsection}{\numberline {3.4.3}Data Collection - Accelerometer}{25}
+\contentsline {subsubsection}{\nonumberline Application version change}{25}
+\contentsline {subsection}{\numberline {3.4.4}Data Pre-processing - Accelerometer}{26}
+\contentsline {subsubsection}{\nonumberline Sensor errors}{28}
+\contentsline {subsection}{\numberline {3.4.5}Assigning location to accelerometer data with GPS}{28}
+\contentsline {subsection}{\numberline {3.4.6}Data Collection - Movie material}{29}
+\contentsline {subsection}{\numberline {3.4.7}Analysis - Mapping irregular surfaces with an Accelerometer}{29}
+\contentsline {subsubsection}{\nonumberline Statistics}{31}
+\contentsline {subsubsection}{\nonumberline Comparison with Matthews et al. (2003)}{31}
+\contentsline {section}{\numberline {3.5}Method RQ 2C - Mapping abnormal or change events with change point detection using Accelerometer, GPS and AHN2 data}{32}
+\contentsline {subsection}{\numberline {3.5.1}The changepoint package}{32}
+\contentsline {subsection}{\numberline {3.5.2}Routes measured}{33}
+\contentsline {chapter}{\numberline {4}Results}{35}
+\contentsline {section}{\numberline {4.1}Results RQ 1. - Finding the critical factors for walkability}{35}
+\contentsline {subsection}{\numberline {4.1.1}Findings critical factors from literature}{35}
+\contentsline {subsection}{\numberline {4.1.2}Summary personal interviews}{37}
+\contentsline {subsection}{\numberline {4.1.3}Summary interviews at Rollator Loop}{37}
+\contentsline {subsection}{\numberline {4.1.4}Findings Amsterdam policy and summary interview municipality}{38}
+\contentsline {subsection}{\numberline {4.1.5}Final list critical factors}{38}
+\contentsline {subsection}{\numberline {4.1.6}Average walking speed}{40}
+\contentsline {section}{\numberline {4.2}Results RQ 2A - Collection and analysis of available geodata}{41}
+\contentsline {subsection}{\numberline {4.2.1}Determining pedestrian area with the GBKA}{41}
+\contentsline {subsection}{\numberline {4.2.2}Mapping sloping surfaces with AHN data}{43}
+\contentsline {section}{\numberline {4.3}Results RQ 2B- Collection of geodata of rollator movements and analysis}{45}
+\contentsline {subsection}{\numberline {4.3.1}Mapping irregular surfaces with an Accelerometer}{45}
+\contentsline {subsection}{\numberline {4.3.2}Comparison with Matthews et al. 2003}{47}
+\contentsline {section}{\numberline {4.4}Results RQ 2C - Mapping abnormal or change events with Accelerometer, GPS and AHN2 data}{48}
+\contentsline {subsection}{\numberline {4.4.1}Comparing different Change Point detection methods}{48}
+\contentsline {subsection}{\numberline {4.4.2}Change point and Segments found for the Meetrollator walking route}{50}
+\contentsline {subsection}{\numberline {4.4.3}Change point and Segments found for the Leica walking route (without accelerometer)}{53}
+\contentsline {subsection}{\numberline {4.4.4}Change point and Segments found for the bike route}{55}
+\contentsline {chapter}{\numberline {5}Conclusion and discussion}{59}
+\contentsline {section}{\numberline {5.1}Conclusion}{59}
+\contentsline {section}{\numberline {5.2}Discussion}{61}
+\contentsline {subsection}{\numberline {5.2.1}The forgotten pedestrian}{61}
+\contentsline {subsection}{\numberline {5.2.2}Interviews with elderly}{62}
+\contentsline {subsection}{\numberline {5.2.3}The Accelerometer sensor}{62}
+\contentsline {subsection}{\numberline {5.2.4}Influenced experiments}{63}
+\contentsline {subsection}{\numberline {5.2.5}Spatial accuracy, detail is key}{63}
+\contentsline {subsection}{\numberline {5.2.6}changepoitn method}{63}
+\contentsline {section}{\numberline {5.3}Reccomendations}{63}
+\contentsline {section}{\numberline {5.4}Final words}{65}
+\contentsline {chapter}{\numberline {A}Appendix}{71}
+\contentsline {section}{\numberline {A.1}Table of contents DVD}{71}
+\contentsline {section}{\numberline {A.2}Walkability criteria total overview}{71}
+\contentsline {section}{\numberline {A.3}Puccini Map Amsterdam}{77}
+\contentsline {section}{\numberline {A.4}Questionnaire}{79}
+\contentsline {section}{\numberline {A.5}Accelerometer app alternatives}{90}
+\contentsline {section}{\numberline {A.6}Interviews with elderly list of possible obstacles}{91}
+\contentsline {section}{\numberline {A.7}Failed measurements}{93}
+\contentsline {section}{\numberline {A.8}Jordaan road classification total}{94}
+\contentsline {section}{\numberline {A.9}Detail of AHN2 of Jordaan}{97}
+\contentsline {section}{\numberline {A.10}Change Point methods tests for Speed}{99}
