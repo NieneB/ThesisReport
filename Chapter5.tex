@@ -68,35 +68,32 @@ The accuracy or errors from the accelerometer are unknown, as the quality of the
 \subsection{Influenced experiments}
 After the failed measurements, the researcher herself conducted some extra walks. This could give a wrong image on the measured walking behaviour outcome. From Wang et al. we learned that there is no difference in walking gait characteristics between elderly and young people.~\cite{Wang2015} But that elderly are more used to handling a rollator compared to young people, for which a rollator could be an obstacle in moving more easily. Walking with the rollator myself could have influenced the outcomes. 
 
-
 \subsection{Spatial accuracy, detail is key}
-The GPS on the phone not exact enough. This resulted in wrong extraction of data values from the AHN2 and the slope raster. So these change points did not represent the true values for the location. 
+The location measured with the smart phone  or the Garmin summit are not exact enough to detect the location on a few centimetres exact. This resulted in wrong extraction of data values from the AHN2 and the slope raster. The detected change points from this dataset did not represent the true values for the location were the route was walked. Therefore many slope change points cannot be used to form a conclusion. In order to detect exactly where a route was walked, a good location determination is needed. The detail required, is almost on stone level. It has no use when it cannot be determined if someone is walking on the right side of the street or the left. Also on the pavement section, even put holes or curbs are of significant importance. The Leica system can detect the location on a few centimetres accuracy. But is a heavy system which cannot be easily mounted on a rollator without influencing the rollator control and movement. Possibly, causing a dangerous situation for the elderly depending on it. 
 
-No hard conclusions can be drawn for the accuracy is not known. 
+\subsection{Changepoint method}
+Unknown method, which not used before. Though shows a lot of potential and interesting opportunities to analyse statistical route characteristics. 
 
+The urban environment will never be optimal, so certain change points will indicate not so important happenings. 
 
-
-\subsection{changepoitn method}
-Now, the urban environment will never be optimal, so certain change points will indicate not so important happenings. 
-
+deviations in the measurements:
 starten met lopen, is een harde duw tegen de rollator? waardoor er een piek in de accelerometer data ontstaat. 
 
 
-
-
 Could not use trend, seasonality and random analysis, for no seasonality in the data. Surface hindrance changes per surface. Obstacles show more as abnormalities. BFASTt method. BFAST, Breaks For Additive Season and Trend, integrates the decomposition of time series into trend, season, and remainder components with methods for detecting and characterizing change within time series. BFAST & BFASTmonitor: http://bfast.r-forge.r-project.org/ 
-\section{Reccomendations} %hoe nu verder. Wat meer? LIJST
 
+
+
+\section{Recommendations} %hoe nu verder. Wat meer? LIJST
 Recommendations to improve this study
 \begin{itemize}
-
-\item Conduct more interviews with elderly living in Amsterdam and walking with a rollator outdoors, to get a better understanding of the location specific problems. Thoug, trough the literature research and the few interviews held, already a good insight is presented. 
+\item Conduct more interviews with elderly living in Amsterdam and walking with a rollator outdoors, to get a better understanding of the location specific problems. Though, trough the literature research and the few interviews held, already a good insight is presented. 
 
 \item In order to conduct a goo pedestrian area classification, it would have been better not to include parking plots into the pedestrian area. Comparing the classification methods with manual classification could have said more about the accuracy of the method. But was too time consuming for this research. 
 
 \item Conduct more controlled experiments with elderly themselves. Also comparing routes walked in a controlled environment against routes walked in the real living environment. This can give better insights if this methods works for detecting obstacles along the real walking routes of elderly, when walked by themselves. Instead of a young vital person walking with a rollator. 
 
-\item Use better GPS systems, like the Leica stystem for location determination. The detail for which the detection of obstacles is needed, has to be very precise. The slightest deviation can give falsehoods in the change point detection for slope. The research of Wang et al.~\cite{Wang2015} uses exact accelerometer to monitor the displacement for every step made. By using this method the route of a person could be exactly determined from the starting point, with an accuracy of about 1 cm and no GPS would be needed. This would also require a standard measure rollator were the exact distances of the sensor to the wheels and frame has to be known.
+\item Use better GPS systems, like the Leica system for location determination. The detail for which the detection of obstacles is needed, has to be very precise. The slightest deviation can give falsehoods in the change point detection for slope. The research of Wang et al.~\cite{Wang2015} uses exact accelerometer to monitor the displacement for every step made. By using this method the route of a person could be exactly determined from the starting point, with an accuracy of about 1 cm and no GPS would be needed. This would also require a standard measure rollator were the exact distances of the sensor to the wheels and frame has to be known.
 
 \item The AHN2 promised good possibilities to detect surface quality and sloping pavements. Even the detection of curbs and ramps could be possible. More research to the application and possibilities of the AHN2 can be interesting.
 \end{itemize}
@@ -104,11 +101,13 @@ Recommendations for future research:
 \begin{itemize}
 \item Find a possible way to quantify the relation between surface hindrance and the effort needed for elderly with a rollator to walk on. For example measuring energy use of elderly. Also the perception of elderly to different surface circumstances could be measured. An interesting link could be the report from Hogertz et al. 2010~\cite{Sauter2010}, which tries to measure skin conductivity as a quantitative measure for arousal. 
 
+% \begin{figure}
+% \includegraphics{img/D_hogertz}
+% \end{figure}
+
 Possible applications of smart phone with accelerometer use, for measuring rollator movements or surface resistance. Translate this to the amount of energy that elderly consume. 
 
-\item
-Possible applications might be to detect the kind of surface material from the accelerometer signatures. Create a specific signature for a specific surface material. What has to be taken into account is the different set of rollators that exists. Which react differently to surface irregularities.
-
+\item Possible applications might be to detect the kind of surface material from the accelerometer signatures. Create a specific signature for a specific surface material. What has to be taken into account is the different set of rollators that exists. Which react differently to surface irregularities.
 
 \item This study could be used to create a low cost, non-intrusive method for identifying the location of obstacles on the route of elderly with a rollator. A more in detail method could be designed, that automatically filters out priority obstacles where the data changes in a specific way. 
 
