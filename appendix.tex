@@ -38,51 +38,56 @@ Applications and scripts
 \clearpage
 
 \section{Walkability criteria total overview}\label{Acriteria}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{img/annex/A1_crossings_criteria.pdf}
 \includegraphics[width=\textwidth]{img/annex/A5_weather_criteria.pdf}
+\end{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{img/annex/A2_pavement_criteria.pdf}
+\end{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{img/annex/A3_street_criteria.pdf}
+\end{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{img/annex/A4_environment_criteria.pdf}
+\end{figure}
+
+\clearpage
 
 \section{Puccini Map Amsterdam}
 \includepdf[pages=-, scale = 1 , landscape = true ]{img/annex/A_puccini_visiekaart.pdf}\label{pucciniMap}
-
 \clearpage
 
 \section{Questionnaire}\label{Aquest}
 \includepdf[pages=-, scale = 1]{img/annex/A_questionaire.pdf}
-
 \clearpage
 
 \section{Accelerometer app alternatives}\label{Aapps}
 \textbf{Accelerometer Monitor, Mobile Tools.}
 \begin{itemize}
-\item Output as .txt file. 
-\item Time saved as difference between measurements in milliseconds. No clock-time.
-\item $X(m/s^2)$, $Y(m/s^2)$ and $Z(m/s^2)$
+	\item Output as .txt file. 
+	\item Time saved as difference between measurements in milliseconds. No clock-time.
+	\item $X(m/s^2)$, $Y(m/s^2)$ and $Z(m/s^2)$
 \end{itemize}
 The Accelerometer Monitor did not give a clock-time bases time stamp, therefore it was hard to link it to the GPS data. Also the .txt output needed some processing before use. 
 
 \textbf{Accelerometer Monitor, keuwlsoft Tools.}
 \begin{itemize}
-\item Option to safe output on the phone, but only limited amount of readings were done. Then no output was generated any more.
-\item Output as .txt file
-\item Time as seconds passed. No clock-time
-\item $X(m/s^2)$, $Y(m/s^2)$, $Z(m/s^2)$ and $R(m/s^2)$, Theta(deg) and Phi(deg) As given by the application itself. 
+	\item Option to safe output on the phone, but only limited amount of readings were done. Then no output was generated any more.
+	\item Output as .txt file
+	\item Time as seconds passed. No clock-time
+	\item $X(m/s^2)$, $Y(m/s^2)$, $Z(m/s^2)$ and $R(m/s^2)$, Theta(deg) and Phi(deg) As given by the application itself. 
 \end{itemize}
 The Accelerometer Monitor from Keuwlsoft stopped measuring after a random amount of time, so could not be trusted. Also, no clock based time stamp was provided which made it harder to link to the GPS data.
 
 \textbf{AcMeter}
 \begin{itemize}
-\item No function to save data
+	\item No function to save data
 \end{itemize}
 The AcMeter showed the accelerometer output of the phone on screen, but did not contain a function to save the data. It was not the only application that had only this function, but an example for the many applications that can be found on-line. 
 
-\clearpage
-
 \section{Interviews with elderly list of possible obstacles}\label{Aelderly}
-% tabel in annex
-% From interviews with elderly list
+The numbers correspondent to the following occurrences as used during the interview. 
 \begin{enumerate}
 	\item = never
 	\item = rarely
@@ -91,9 +96,9 @@ The AcMeter showed the accelerometer output of the phone on screen, but did not 
 	\item = always
 \end{enumerate}
 
-\begin{table}[ht]
+\begin{table}[H]
 \caption{Average score per possible problem \label{obstacles}}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|p{195pt}|p{195pt}|}
 	\hline
 	 & Average score \\
 	\hline
@@ -150,34 +155,32 @@ The AcMeter showed the accelerometer output of the phone on screen, but did not 
 \clearpage
 
 \section{Failed measurements}\label{Afailed}
-\includegraphics[width=0.85\textwidth]{img/annex/walkmeetrollator.jpeg}
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/annex/walkmeetrollator.jpeg}
 % \includegraphics[width=\textwidth]{img/annex/walkpart1}
-\includegraphics[width=0.85\textwidth]{img/annex/walkpart75.jpeg}
-\includegraphics[width=0.85\textwidth]{img/annex/walkpart85.jpeg}
+\includegraphics[width=\textwidth]{img/annex/walkpart75.jpeg}
+\includegraphics[width=\textwidth]{img/annex/walkpart85.jpeg}
+\end{figure}
 \includegraphics[width=\textwidth]{img/annex/A_failedmeasurementsMap.pdf}
-
 \clearpage
 
-\section{Jordaan road classification total}\ref{Ajordaan}
+\section{Jordaan road classification total}\label{Ajordaan}
 \includepdf[pages=- , nup=1x1]{img/annex/A_Jordaan_weg_classificatie_resultat.pdf}
 
-\clearpage
-
 \section{Detail of AHN2 of Jordaan}\label{AAHN}
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{img/R_AHN_jordaan.pdf}
+\begin{figure}[th]
+\includegraphics[width=\textwidth]{img/annex/A_AHN_jordaan.pdf}
 \centering
-\caption{
-Detail Jordaan height map\label{jordaanahn}}
+\caption{Detail Jordaan height map\label{jordaanahn}}
 \end{figure} 
 
 \clearpage
 
-\section{Change Point methods tests for Speed}\label{Acptest}
+\section{changepoint methods tests for Speed}\label{Acptest}
 \begin{figure}
-\includegraphics{img/R_comparisonMethodsSpeed2.pdf}
+\includegraphics{img/annex/A_comparisonMethodsSpeed2.pdf}
 \end{figure}
-
+\clearpage
 
 
 

@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper, titlepage, onecolumn, openright, twoside, justified, parskip=full, fleqn, abstract, unicode=true, pdfencoding=auto,x11names, noindent, BCOR=-0.2mm, DIV=calc]{scrreprt}  %twoside 
+\documentclass[10pt,a4paper, titlepage, onecolumn, openright, twoside, justified, parskip=full, fleqn, abstract, unicode=true, pdfencoding=auto,x11names, noindent, BCOR=1cm, DIV=calc]{scrreprt}  %twoside 
 
 % final, twoside, BCOR=-0.2mm, DIV=calc, openright, a4paper, abstract, toc=bibliography,toc=listof,unicode=true,pdfencoding=auto,x11names
 
@@ -10,6 +10,7 @@
 \usepackage{scrhack}
 \usepackage{amsmath}
 \usepackage{multirow}
+% \usepackage{enumitem}
 % \usepackage{showframe}
 % \usepackage{parskip}
 \usepackage[hscale=0.69,vscale=0.79,heightrounded,includehead]{geometry} %bindingoffset=8mm
@@ -48,36 +49,13 @@
 
 	% \maketitle
 	
-	\begin{titlepage}
-		\vspace*{-3cm}
-		\Large Centre for Geo-Information \vspace*{0.5cm}
-		
-		\Large Thesis Report GIRS-2015-28
-
-		\noindent\makebox[\linewidth]{\rule{\textwidth*2}{0.7pt}}
-		\begin{center}
-			\vspace*{3cm}
-			\Huge \textbf{Facing the unfriendly street}
-
-			\vspace{0.5cm}
-			\LARGE\textit Mapping critical walkability factors of elderly people walking with a Rollator, in the outdoor public space of Amsterdam the Netherlands.
-						
-			\vspace{1.5cm}
-
-			Niene Boeijen
-
-			\vfill
-			
-			\Large January 2016
-		\end{center}
-	\end{titlepage}
-
+	\includepdf{img/voorkant.pdf}
 	\begin{titlepage}
 		\begin{center}
 			\LARGE \textbf{Facing the unfriendly street}
 			\vspace*{0.5cm}
 			
-			\Large\textit Mapping critical walkability factors of elderly people walking with a Rollator, in the outdoor public space of Amsterdam the Netherlands. \par
+			\Large Mapping critical walkability factors of elderly people walking with a Rollator, in the outdoor public space of Amsterdam the Netherlands. \par
 			
 			\vspace*{1.5cm}
 			
@@ -103,7 +81,7 @@
 		\vfill
 		
 		\begin{flushright}
-			January 2016
+			March 2016
 			Wageningen, The Netherlands
 		\end{flushright}
 		
@@ -119,14 +97,16 @@
 		
 	\end{titlepage}
 
+	\include{abstract}
+	\include{Acknowlegdements}
+
 	\cleardoublepage
 	\tableofcontents
 	\listoffigures 
 	
 	 \cleardoubleevenemptypage
 	\listoftables 
-	\include{abstract}
-
+	
 	\cleardoublepage
 	\pagenumbering{arabic}
 	

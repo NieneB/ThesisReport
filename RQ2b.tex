@@ -1,4 +1,4 @@
-\section{Method RQ 2B - Collection geodata of rollator movements and analysis}
+\section{Method RQ 3 - Collection geodata of rollator movements and analysis}\label{rq2b}
 The data collection and pre-processing per sensor used in this research will be explained in the next sections per sensor. The different sensors make use of different time zones or geographic systems, therefore some general pre-processing steps had to be conducted to standardize all the files in order to compare them in the end. 
 
 \subsection{Data Collection - GPS }
@@ -34,7 +34,7 @@ For more precise location measurements the Leica system was attached to the Meas
 The Leica is much more precise then the Garmin or the GPS tracker on the smart phone. But when the Leica was not available, the other two methods still gave a good reference as were the route was. 
 
 \subsection{Data Pre-processing - GPS }
-Figure \ref{gpspp} shows all pre-processing steps that are applied to all location datasets. First the files are imported  into Arc-map, creating point features. From from GPX or KLM file. When necessary, they were transformed from WGS1984 to RD new. The time attribute was edited all data contained the format YYYY-mm-dd HH:MM:SS.OOO and was transformed to time zone CET. The Track Analyst tool was used for computing difference in time, speed and course between every GPS point. The settings used are: 
+Figure \ref{gpspp} shows all pre-processing steps that are applied to all location datasets. First the files are imported into Arc-map, creating point features. From from GPX or KLM file. When necessary, they were transformed from WGS1984 to RD new. The time attribute was edited all data contained the format YYYY-mm-dd HH:MM:SS.OOO and was transformed to time zone CET. The Track Analyst tool was used for computing difference in time, speed and course between every GPS point. The settings used are: 
 \begin{itemize}
  \item First to second point
  \item Meters, Seconds, Meter per seconds and Degrees
@@ -51,7 +51,7 @@ Eventually, the dataset were manually edited to delete the start and end points,
 \subsection{Data Collection - Accelerometer}
 We used a Samsung Galaxy Core GT-I8260 smart phone which was available at the conducting faculty. With the application; Accelerometer Physics toolbox accelerometer to extract the 3-axis acceleration data on the X, Y and Z axis and the total acceleration called g-force. Physics Toolbox Accelerometer proved to be the best option for extracting the data, for it is easy to use, can store the data in a csv file, with current clock time, time stamp and saves it on the local storage of the phone. It does not require a constant internet connection, and was free for use. Also no knowledge on any pre-programming to read the sensors was required. Some of the other application alternatives considered are: Accelerometer Monitor from Mobile Tools, Accelerometer Monitor from Keuwlsoft Tools, and the AcMeter. Their specifications and reasons why not used, can be found in Annex \ref{Aapps}. 
 
-During all measurements, the smart phone will always be placed horizontally on the Rollator. This means the $z$-axis is pointing down, and will correlate most with movements up and down. The x-axis will be pointing sideways and the y-axis front and back. Acceleration of walking speed will be seen in the $y$-axis. While turns will be seen in the $x$-axis. See figure ~\ref{setup}.
+During all measurements, the smart phone will always be placed horizontally on the Rollator. This means the $z$-axis is pointing down, and will correlate most with movements up and down. The x-axis will be pointing sideways and the y-axis front and back. Acceleration of walking speed will be seen in the $y$-axis. While turns will be seen in the $x$-axis. See figure \ref{setup}.
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{img/M_RollatorSetup.pdf}
 \centering
@@ -89,10 +89,10 @@ The total acceleration or g-force is supplied by the application: It is the tota
 A_{m} = \sqrt {{A_{x}}^{2} + {A_{y}}^{2} + {A_{z}}^ {2}}
 \end{equation} For each time series $A_{i}$ , with $i = {x, y, z}$ 
 
-With cross correlation between the several features, we can detect which feature best represents the walk characteristics. $A_{m}$ is a representative parameter which includes the gait acceleration (Y-axis), the vertical acceleration (Z-axis) and the lateral acceleration (X-axis). ~\cite{Weiss2014} By doing a cross correlation with the Z-axis and the X and Y axis a similarity between the lateral acceleration, mostly caused by the surface, and the gait acceleration is detected. The cross correlation of the $x$ and $z$ axis is expressed by:
+With cross correlation between the several features, we can detect which feature best represents the walk characteristics. $A_{m}$ is a representative parameter which includes the gait acceleration (Y-axis), the vertical acceleration (Z-axis) and the lateral acceleration (X-axis).~\cite{Weiss2014} By doing a cross correlation with the Z-axis and the X and Y axis a similarity between the lateral acceleration, mostly caused by the surface, and the gait acceleration is detected. The cross correlation of the $x$ and $z$ axis is expressed by:
 
 \begin{equation}
-Corr_{z,x} = \sum z(n)x(n-1)  %blablabla wat doe ik hiermee? 
+Corr_{z,x} = \sum z(n)x(n-1) %blablabla wat doe ik hiermee? 
 \end{equation}
 
 Accelerometer output ranged between the normalized range of -2 to 2. Assumed is that the value of 1 means equal to 1 times the gravitational force: 9.81 $m/s^2$ and the value of 0 means no force pulling, so the sensor is flat. The developer stated, that these normalized values differ per type of smart phone.\footnote{Information provided by Chrystian Vieyra, developer of the Physics Toolbox Applications. In e-mail conversation 26-10-15. }
@@ -109,10 +109,10 @@ The application contained several settings, which were not described in the appl
 \hline 
  Setting & Points per sec (exact) & Points per sec (approx.) & Periodicity (1/(points per sec))\\
 \hline
-NORMAL & 4.6 & 5 &  0.2 \\
+NORMAL & 4.6 & 5 & 0.2 \\
 UI & 11.9 & 10 & 0.1 \\
-GAME & 49.6 & 50 &  0.02 \\
-FAST & 99.4 & 100 &  0.01 \\
+GAME & 49.6 & 50 & 0.02 \\
+FAST & 99.4 & 100 & 0.01 \\
 \hline
 \end{tabular}
 \end{table}
@@ -154,10 +154,10 @@ For reference, the accelerometer data can be linked to the location by using the
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/M_location_calc.pdf}
 \centering
-\caption{Graphical explanation of change point location calculations \label{cpcalc}}
+\caption{Graphical explanation of changepoint location calculations \label{cpcalc}}
 \end{figure}
 
-With coordinates ($x_{1}, y_{1}$) and  ($x_{2}, y_{2}$) in RDnew as the known first and second GPS point, respectively. 
+With coordinates ($x_{1}, y_{1}$) and ($x_{2}, y_{2}$) in RDnew as the known first and second GPS point, respectively. 
 
 The distance between $(x_{1}, y_{1})$ and $(x_{2}, y_{2})$ is calculated by:
 \begin{equation}
@@ -171,15 +171,15 @@ d_{1,Acc} = s * time difference((x_{1}, y_{1}) - (x_{Acc}, y_{Acc}))
 
 The unknown $x$ coordinate of the accelerometer point is calculated with:
 \begin{equation}
-x_{Acc} = x_{1} +  \frac{d_{1,cp}}{d_{1,2}} * (x_{2} - x_{1})
+x_{Acc} = x_{1} + \frac{d_{1,cp}}{d_{1,2}} * (x_{2} - x_{1})
 \end{equation}
 
 And the unknown $y$ coordinate of the accelerometer point is calculated with:
 \begin{equation}
-y_{Acc} = y_{1} +  \frac{d_{1,cp}}{d_{1,2}} * (y_{2} - y_{1})
+y_{Acc} = y_{1} + \frac{d_{1,cp}}{d_{1,2}} * (y_{2} - y_{1})
 \end{equation}
 
-Now we can add the location specific data to the change points, the speed($S$) extracted from the track GPS points and the AHN values, height and slope. Resulting in a feature per observation of:
+Now we can add the location specific data to the changepoints, the speed($S$) extracted from the track GPS points and the AHN values, height and slope. Resulting in a feature per observation of:
 
 \begin{multline} 
 	F_(i) = [ Time stamp, A_{x}, A_{y}, A_{z}, A_{m}, s, height, slope] 
@@ -189,7 +189,7 @@ Now we can add the location specific data to the change points, the speed($S$) e
 Most walks were recorded on film, for reference aid. This was done with either a go-pro, flip camera or with the smart phone camera. Pointed at the direct surface in front of the rollator. The images are not used for calculations, solely for reference backup. 
 
 \subsection{Analysis - Mapping irregular surfaces with an Accelerometer}
-Several test were conducted with the Measurement Rollator on different surfaces. To see if the vibrations of the rollator are more fierce on surfaces with a more irregular surfaces. Indicating more surface hindrance and so more energy is needed for the rollator user. The assumption is, that the vibrations caused by surface hindrance can be measured through the variance of the z-axis acceleration. We used the Accelerometer (Physics Toolbox version 1.3.7) and the Garmin to record GPS. The goal was to walk with an average walking speed of $4.7 km/h (3.2 – 6.2 km/h)$. This is the walking speed found from literature and own research. Though, while walking it felt quite fast. So the walking speed was kept around 4 km/h as best as possible. The researcher walked herself with the rollator over different surfaces. Each a distance of around $20m$. All the pavement surfaces structures shown in image ~\ref{surfaceimg} were tested. Asphalt or tarmac, brick paving, tiles, gravel, grass and a smooth concrete surface inside was measured. 
+Several test were conducted with the Measurement Rollator on different surfaces. To see if the vibrations of the rollator are more fierce on surfaces with a more irregular surfaces. Indicating more surface hindrance and so more energy is needed for the rollator user. The assumption is, that the vibrations caused by surface hindrance can be measured through the variance of the z-axis acceleration. We used the Accelerometer (Physics Toolbox version 1.3.7) and the Garmin to record GPS. The goal was to walk with an average walking speed of $4.7 km/h (3.2 – 6.2 km/h)$. This is the walking speed found from literature and own research. Though, while walking it felt quite fast. So the walking speed was kept around 4 km/h as best as possible. The researcher walked herself with the rollator over different surfaces. Each a distance of around $20m$. All the pavement surfaces structures shown in image \ref{surfaceimg} were tested. Asphalt or tarmac, brick paving, tiles, gravel, grass and a smooth concrete surface inside was measured. 
 
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{img/M_All_surfaces.pdf}
@@ -208,7 +208,7 @@ Several test were conducted with the Measurement Rollator on different surfaces.
 \subsubsection{Statistics}
 By providing the descriptive statistics of the accelerometer output as a normal distribution, the differences in the vibrations on different surfaces can be explained. The data is approaching a normal distribution as can be seen in the example histogram of all the surfaces combined.(~\ref{hist}) Vibration goes into both directions so the mean will not show a surface specific outcome and will not differ much between the different surfaces. The means calculated only gave values around the 1. See table~\ref{surfacehindrance} in the results. The variability shows better how rough the surface is. Therefore the variability is used, or the standard deviation together with the 5-number summary to create box plots. Including, the minimum, maximum, median and first and third quantile. To show a better understanding of the effect of the surface on the vibrations on the rollator. The formula for the mean variance and standard deviation:
 
-\textbf{Mean:}  
+\textbf{Mean:} 
 \begin{equation}
 Mean A_{z} = \frac{\sum_{k=1}^n A_{z}}{n}
 \end{equation}
@@ -225,12 +225,12 @@ Mean A_{z} = \frac{\sum_{k=1}^n A_{z}}{n}
 
 \subsubsection{Comparison with Matthews et al. (2003)}
 In Matthews et al. (2003)~\cite{Matthews2003} a reference score for hindrance of specific surfaces is provided. Shown in table~\ref{hindrance}.
-Small test were conducted measuring surface hindrance for wheelchair users, aiming at surface type and quality for mobility. Six common urban surfaces were tested: concrete, paving, tarmac, brick, grass and gravel. A wheelchair with occupant was pushed down a small ramp the distance rolled provides an measure for rolling resistance. ~\cite{Matthews2003}
+Small test were conducted measuring surface hindrance for wheelchair users, aiming at surface type and quality for mobility. Six common urban surfaces were tested: concrete, paving, tarmac, brick, grass and gravel. A wheelchair with occupant was pushed down a small ramp the distance rolled provides an measure for rolling resistance.~\cite{Matthews2003}
 These values will be used as a reference, to see if the measured vibrations of the Accelerometer correlate. Because the reference numbers are relative, also the measured outcome is recalculated to a relative factor. Taking the most smooth surface as factor 1 and calculating the rest of the surfaces from this. See results in figure~\ref{comparefig} for a comparison of the values of Matthews and the calculated factors. 
  % figure comparison factors measured and given 4.3
 
 \begin{table}[hb]
-\caption[Relative hindrance scores of surfaces]{Relative hindrance scores of surfaces, low scores represent levels of least hindrance ~\cite{Matthews2003} \label{hindrance}}
+\caption[Relative hindrance scores of surfaces]{Relative hindrance scores of surfaces, low scores represent levels of least hindrance~\cite{Matthews2003} \label{hindrance}}
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}
 	\hline
