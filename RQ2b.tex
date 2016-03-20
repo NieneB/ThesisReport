@@ -76,7 +76,7 @@ The accelerometer dataset contains the following specifications:
 
 The measurements resulted in dataset with per feature :
 \begin{equation} 
-	F_(i) = [ Time stamp, A_{x}, A_{y}, A_{z}, A_{m}] 
+	F_{(t)} = [A_{x}, A_{y}, A_{z}, A_{m}] 
 \end{equation}
 With $A_{x}$ as the $x-axis$ acceleration
 $A_{y}$ as the $y-axis$ acceleration
@@ -107,7 +107,7 @@ The application contained several settings, which were not described in the appl
 \centering
 \begin{tabular}{|p{91pt}|p{91pt}|p{91pt}|p{91pt}|} 
 \hline 
- Setting & Points per sec (exact) & Points per sec (approx.) & Periodicity (1/(points per sec))\\
+ Setting & Points per sec \newline (exact) & Points per sec \newline (approx.) & Periodicity \newline (1/(points per sec))\\
 \hline
 NORMAL & 4.6 & 5 & 0.2 \\
 UI & 11.9 & 10 & 0.1 \\
@@ -161,7 +161,7 @@ With coordinates ($x_{1}, y_{1}$) and ($x_{2}, y_{2}$) in RDnew as the known fir
 
 The distance between $(x_{1}, y_{1})$ and $(x_{2}, y_{2})$ is calculated by:
 \begin{equation}
-d_{1,2} = \sqrt (y_{1}-y_{2})^2 + (x_{1}-x_{2})^2 
+d_{1,2} = \sqrt {(y_{1}-y_{2})^2 + (x_{1}-x_{2})^2 }
 \end{equation}
 
 Then, the distance between GPS point 1 $(x_{1}, y_{1})$ and the un-located accelerometer point $(x_{Acc}, y_{Acc})$ is calculated with:
@@ -181,15 +181,15 @@ y_{Acc} = y_{1} + \frac{d_{1,cp}}{d_{1,2}} * (y_{2} - y_{1})
 
 Now we can add the location specific data to the changepoints, the speed($S$) extracted from the track GPS points and the AHN values, height and slope. Resulting in a feature per observation of:
 
-\begin{multline} 
-	F_(i) = [ Time stamp, A_{x}, A_{y}, A_{z}, A_{m}, s, height, slope] 
-\end{multline}
+\begin{equation} 
+	F_{(t)} = [A_{x}, A_{y}, A_{z}, A_{m}, s, height, slope] 
+\end{equation}
 
 \subsection{Data Collection - Movie material}
 Most walks were recorded on film, for reference aid. This was done with either a go-pro, flip camera or with the smart phone camera. Pointed at the direct surface in front of the rollator. The images are not used for calculations, solely for reference backup. 
 
 \subsection{Analysis - Mapping irregular surfaces with an Accelerometer}
-Several test were conducted with the Measurement Rollator on different surfaces. To see if the vibrations of the rollator are more fierce on surfaces with a more irregular surfaces. Indicating more surface hindrance and so more energy is needed for the rollator user. The assumption is, that the vibrations caused by surface hindrance can be measured through the variance of the z-axis acceleration. We used the Accelerometer (Physics Toolbox version 1.3.7) and the Garmin to record GPS. The goal was to walk with an average walking speed of $4.7 km/h (3.2 – 6.2 km/h)$. This is the walking speed found from literature and own research. Though, while walking it felt quite fast. So the walking speed was kept around 4 km/h as best as possible. The researcher walked herself with the rollator over different surfaces. Each a distance of around $20m$. All the pavement surfaces structures shown in image \ref{surfaceimg} were tested. Asphalt or tarmac, brick paving, tiles, gravel, grass and a smooth concrete surface inside was measured. 
+Several test were conducted with the Measurement Rollator on different surfaces. To see if the vibrations of the rollator are more fierce on surfaces with a more irregular surfaces. Indicating more surface hindrance and so more energy is needed for the rollator user. The assumption is, that the vibrations caused by surface hindrance can be measured through the variance of the z-axis acceleration. We used the Accelerometer (Physics Toolbox version 1.3.7) and the Garmin to record GPS. The goal was to walk with an average walking speed of $4.7 km/h$ average between $3.2$ and $6.2 km/h$. This is the walking speed found from literature and own research. Though, while walking it felt quite fast. So the walking speed was kept around 4 km/h as best as possible. The researcher walked herself with the rollator over different surfaces. Each a distance of around $20m$. All the pavement surfaces structures shown in image \ref{surfaceimg} were tested. Asphalt or tarmac, brick paving, tiles, gravel, grass and a smooth concrete surface inside was measured. 
 
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{img/M_All_surfaces.pdf}
@@ -203,10 +203,8 @@ Several test were conducted with the Measurement Rollator on different surfaces.
 \caption{Histogram of all surfaces $z$-axis acceleration \label{hist}}
 \end{figure}
 
-
-
 \subsubsection{Statistics}
-By providing the descriptive statistics of the accelerometer output as a normal distribution, the differences in the vibrations on different surfaces can be explained. The data is approaching a normal distribution as can be seen in the example histogram of all the surfaces combined.(~\ref{hist}) Vibration goes into both directions so the mean will not show a surface specific outcome and will not differ much between the different surfaces. The means calculated only gave values around the 1. See table~\ref{surfacehindrance} in the results. The variability shows better how rough the surface is. Therefore the variability is used, or the standard deviation together with the 5-number summary to create box plots. Including, the minimum, maximum, median and first and third quantile. To show a better understanding of the effect of the surface on the vibrations on the rollator. The formula for the mean variance and standard deviation:
+By providing the descriptive statistics of the accelerometer output as a normal distribution, the differences in the vibrations on different surfaces can be explained. The data is approaching a normal distribution as can be seen in the example histogram of all the surfaces combined, with a mean around 1.(~\ref{hist}) Vibration goes into both directions so the mean will not show a surface specific outcome and will not differ much between the different surfaces. See table~\ref{surfacehindrance} in the results. The variability shows better how rough the surface is. Therefore the variability is used, or the standard deviation together with the 5-number summary to create box plots. Including, the minimum, maximum, median and first and third quantile. To show a better understanding of the effect of the surface on the vibrations on the rollator. The formula for the mean variance and standard deviation:
 
 \textbf{Mean:} 
 \begin{equation}
